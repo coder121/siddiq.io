@@ -197,6 +197,10 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 var marker = new google.maps.Marker({position:myCenter});
 marker.setMap(map);
 }
+function sendEmail() 
+{
+    window.location = "mailto:info@siddiq.io";
+}
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClStUeJe9ZlBGmoxfKY1SvP7S92YEd4uY&callback=myMap"></script>
 <!-- Footer -->
@@ -207,9 +211,13 @@ marker.setMap(map);
     <span class="fa fa-github"></span>
   </a>
   </a>
-     <a class="btn btn-social-icon btn-linked" style="font-size:48px" href="https://www.linkedin.com/in/siddiq235/" target="_blank">
+     <a class="btn btn-social-icon btn-linkedin" style="font-size:48px" href="https://www.linkedin.com/in/siddiq235/" target="_blank">
     <span class="fa fa-linkedin"></span>
   </a>
+   <a class="btn btn-social-icon " style="font-size:38px" onclick="sendEmail();" target="_blank">
+    <span class="glyphicon glyphicon-envelope"></span>
+  </a>
+
 </footer>
 
 </body>

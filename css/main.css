@@ -41,7 +41,7 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
- a, u {
+ .anch {
     text-decoration: none;
     color:white;
 }

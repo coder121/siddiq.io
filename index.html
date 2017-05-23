@@ -292,47 +292,58 @@ I really enjoyed working with Siddig as part of the agile development team. </p>
   <div class="row">
   <div class="col-sm-4">
       <h3>Oracle Certified Associate Java Programmer</h3>
-      <img src="img/ocjp.PNG" alt="ocjp" width="350" height="300">
+      <img src="img/ocjp.PNG" alt="ocjp" width="350" height="300" id="2" data-toggle="modal" data-target="#myModal">
     </div>
    
     <div class="col-sm-4"> 
       <h3>Front-End JavaScript Frameworks: AngularJS</h3>
-      <img src="img/certs/angular.JPG" alt="Image" width="350" height="300">
+      <img src="img/certs/angular.JPG" alt="Image" width="350" height="300" id="3" data-toggle="modal" data-target="#myModal">
     </div>
    <div class="col-sm-4">
       <h3>Multiplatform Mobile App Development with Web Technologies</h3>
-      <img src="img/mobile.PNG" alt="/img/mobile.png" width="350" height="300">
+      <img src="img/mobile.PNG" alt="/img/mobile.png" width="350" height="300" id="4" data-toggle="modal" data-target="#myModal">
     </div>
     <div class="col-sm-4"> 
       <h3>Using Databases with Python.</h3>
-      <img src="img/dbpy.PNG" alt="Image" width="350" height="300">
+      <img src="img/dbpy.PNG" alt="Image" width="350" height="300" id="5" data-toggle="modal" data-target="#myModal">
     </div>
     <div class="col-sm-4"> 
       <h3>Using Python to Access Web Data</h3>
-      <img src="img/dbweb.PNG" alt="Image" width="350" height="300">
+      <img src="img/dbweb.PNG" alt="Image" width="350" height="300" id="6" data-toggle="modal" data-target="#myModal">
     </div>
     <div class="col-sm-4"> 
       <h3>Python Data Structures </h3>
-      <img src="img/pyds.PNG" alt="Image" width="350" height="300">
+      <img src="img/pyds.PNG" alt="Image" width="350" height="300" id="7" data-toggle="modal" data-target="#myModal">
     </div>
      <div class="col-sm-4"> 
       <h3>Data Structures and Performance</h3>
-      <img src="img/ds.PNG" alt="Image" width="350" height="300">
+      <img src="img/ds.PNG" alt="Image" width="350" height="300" id="8" data-toggle="modal" data-target="#myModal">
     </div>
     <div class="col-sm-4"> 
       <h3>Introduction to Data Science</h3>
-      <img src="img/datascience.PNG" alt="Image" width="350" height="300">
+      <img src="img/datascience.PNG" alt="Image" width="350" height="300" id="9" data-toggle="modal" data-target="#myModal">
     </div>
      <div class="col-sm-4"> 
       <h3>R Programming</h3>
-      <img src="img/r.PNG" alt="Image" width="350" height="300">
+      <img src="img/r.PNG" alt="Image" width="350" height="300" id="10" data-toggle="modal" data-target="#myModal">
     </div> 
      <div class="col-sm-4">
       <h3>Getting started with Augmented Reality</h3>
-      <img src="img/certs/ar.PNG" alt="ar" width="350" height="300">
+      <a><img height="350" width="350" id="1" data-toggle="modal" data-target="#myModal" src="img/certs/ar.PNG" alt='Getting started with Augmented Reality' /></a>
     </div>
     </div>
-
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img class="showimage img-responsive" src=""/>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
     
  
 </div>
@@ -357,13 +368,17 @@ I really enjoyed working with Siddig as part of the agile development team. </p>
  -->
 
 <script>
-// function myMap() {
-// var myCenter = new google.maps.LatLng(37.3541, -121.9552);
-// var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
-// var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-// var marker = new google.maps.Marker({position:myCenter});
-// marker.setMap(map);
-// }
+$(document).ready(function () {
+    $('img').on('click', function () {
+        var image = $(this).attr('src');
+
+        //alert(image);
+        $('#myModal').on('show.bs.modal', function () {
+            $(".showimage").attr("src", image);
+
+        });
+    });
+});
 function sendEmail() 
 {
     window.location = "mailto:info@siddiq.io";
@@ -469,7 +484,7 @@ function sendEmail()
 })();
 </script>
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClStUeJe9ZlBGmoxfKY1SvP7S92YEd4uY&callback=myMap"></script>
+
 <!-- Footer -->
 
 

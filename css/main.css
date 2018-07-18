@@ -276,7 +276,7 @@
     
     z-index: 9999;
 }
-.open:hover>.box{
+.open:hover>.box ,.open:active>.box{
   height:450px;
       transition: height .6s ease-out;
 }

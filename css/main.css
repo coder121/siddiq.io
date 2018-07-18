@@ -262,3 +262,27 @@
     margin: 0 auto;
     border-radius: 100px;
 }
+
+.chat-box{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.box{
+    transition: height .6s ease-out;
+    width: 450px;
+    height: 0px;
+    color:white;
+    
+    z-index: 9999;
+}
+.open:hover>.box{
+  height:450px;
+      transition: height .6s ease-out;
+}
+#bill{
+width: 300px;
+  height: 20px;
+  background-color: green;
+
+}

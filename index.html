@@ -11,7 +11,7 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
+ 
 </head>
 <body>
 
@@ -436,6 +436,17 @@ I really enjoyed working with Siddig as part of the agile development team. </p>
  -->
 
 <script>
+
+  document.onmousedown=disableclick;
+status="Right Click Disabled";
+function disableclick(e)
+{
+  if(event.button==2)
+   {
+     alert(status);
+     return false;  
+   }
+}
 $(document).ready(function () {
     $('img').on('click', function () {
         var image = $(this).attr('src');
